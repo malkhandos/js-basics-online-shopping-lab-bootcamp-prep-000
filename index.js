@@ -55,12 +55,10 @@ return 'That item is not in your cart.'
 }
 
 function placeOrder(cardNumber) {
-  if (cardNumber===undefined){
-    return "Sorry, we don't have a credit card on file for you."
+  if (cardNumber!==undefined){
+    return `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
 }else
 
-console.log(`Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`);
-cart.length=0;
-  return;
+return 
 }
 
