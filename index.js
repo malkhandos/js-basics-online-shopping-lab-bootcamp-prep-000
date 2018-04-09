@@ -50,7 +50,8 @@ for (let i=cart.length-1;i>=0; --i) {
         cart.splice(i,1);
     return cart;
 }else if (item===undefined)
-return 'That item is not in your cart.'
+alert('That item is not in your cart.')
+return;
   }
 }
 
