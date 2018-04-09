@@ -45,11 +45,11 @@ for (let i=0;i<cart.length;i++){
 }
 
 function removeFromCart(item) {
-for (let i=0;i<cart.length;i++) {
+for (let i=cart.length-1;i>=0; --i) {
     if (cart[i].itemName===item) {
         cart.splice(i,1);
     return cart;
-}else
+}else if (item===undefined)
 return 'That item is not in your cart.'
   }
 }
