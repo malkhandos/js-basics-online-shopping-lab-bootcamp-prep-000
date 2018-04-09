@@ -51,7 +51,6 @@ for (let i=cart.length-1;i>=0; --i) {
     return cart;
 }else if (item===undefined)
 alert('That item is not in your cart.')
-return;
   }
 }
 
