@@ -49,8 +49,8 @@ for (let i=cart.length-1;i>=0; --i) {
     if (cart[i].itemName===item) {
         cart.splice(i,1);
     return cart;
-}else if (item===undefined)
-alert('That item is not in your cart.')
+}else
+return 'That item is not in your cart.'
   }
 }
 
