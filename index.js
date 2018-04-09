@@ -23,15 +23,15 @@ function viewCart() {
     return 'Your shopping cart is empty.'
   }else if (cart.length===1) 
   {for (var i = 0;i<cart.length;i++){
-  newCart.push(`${cart[i].item} at $${cart[i].price}`)
+  newCart.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)
   }return `In your cart, you have ${newCart}.`
 }else if (cart.length===2){
   for (let i=0;i<cart.length;i++){
-  newCart.push(`${cart[i].item} at $${cart[i].price}`)  
+  newCart.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)  
   }return `In your cart, you have ${newCart.join(', and ')}.`
 }else if (cart.length>2){
   for (let i = 0;i<cart.length;i++){
-  newCart.push(`${cart[i].item} at $${cart[i].price}`)  
+  newCart.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)  
   }return 'In your cart, you have '+newCart.slice(0,-1).join(', ') +', and ' + newCart.slice(-1)+'.';
   }
 }
@@ -39,14 +39,14 @@ function viewCart() {
 function total() {
 var current=[];
 for (let i=0;i<cart.length;i++){
-  current.push(cart[i].price)}
+  current.push(cart[i].itemPrice)}
   var totals = current.reduce(( x, y ) => x + y, 0);
   return totals
 }
 
 function removeFromCart(item) {
 for (let i=cart.length-1;i>=0; --i) {
-    if (cart[i].item===item) {
+    if (cart[i].itemName===item) {
         cart.splice(i,1);
     return cart;
 }else
