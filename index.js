@@ -45,7 +45,13 @@ for (let i=0;i<cart.length;i++){
 }
 
 function removeFromCart(item) {
-  
+for (let i = cart.length-1;i>=0; --i) {
+    if (cart[i].item===item) {
+        cart.splice(i,1);
+    return cart;
+}else
+return 'That item is not in your cart.'
+  }
 }
 
 function placeOrder(cardNumber) {
